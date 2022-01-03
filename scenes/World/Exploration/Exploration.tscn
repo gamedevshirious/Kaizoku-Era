@@ -1,0 +1,68 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scenes/World/Exploration/Ship3D/Ship3D.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/World/Exploration/SeaMesh.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/World/Exploration/Exploration.gd" type="Script" id=3]
+[ext_resource path="res://scenes/World/Islands/Template/Island.tscn" type="PackedScene" id=4]
+
+[sub_resource type="OpenSimplexNoise" id=4]
+
+[sub_resource type="NoiseTexture" id=5]
+as_normalmap = true
+noise = SubResource( 4 )
+
+[sub_resource type="SpatialMaterial" id=6]
+flags_transparent = true
+albedo_color = Color( 0.305882, 0.713726, 0.972549, 0.901961 )
+roughness = 0.03
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = SubResource( 5 )
+uv1_offset = Vector3( 0.737059, 0, 0 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "wave"
+length = 1000.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("MeshInstance:material/0:uv1_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 500 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0.925, 0, 0 ) ]
+}
+
+[node name="Exploration" type="Spatial"]
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="MeshInstance" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.93185, 0, -0.362845, 0, 1, 0, 0.362845, 0, 0.93185, 350.341, 0, 40.778 )
+layers = 2
+skeleton = NodePath("../Ship3D")
+material/0 = SubResource( 6 )
+
+[node name="Ship3D" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 350.341, 0, 40.778 )
+
+[node name="RemoteTransform" type="RemoteTransform" parent="Ship3D"]
+remote_path = NodePath("../../MeshInstance")
+update_rotation = false
+update_scale = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/wave = SubResource( 3 )
+
+[node name="Islands" type="Spatial" parent="."]
+
+[node name="Template" parent="Islands" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 351.6, 0, 648.736 )
+
+[node name="Guide" type="ImmediateGeometry" parent="."]

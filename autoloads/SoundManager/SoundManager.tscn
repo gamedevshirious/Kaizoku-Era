@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://autoloads/SoundManager/SoundManager.gd" type="Script" id=1]
+[ext_resource path="res://assets/music_and_sfx/calm.mp3" type="AudioStream" id=2]
+
+[node name="SoundManager" type="Node"]
+pause_mode = 2
+script = ExtResource( 1 )
+
+[node name="bg" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 2 )
+autoplay = true
+
+[node name="sfx" type="AudioStreamPlayer" parent="."]
+
+[connection signal="finished" from="sfx" to="." method="_on_sfx_finished"]

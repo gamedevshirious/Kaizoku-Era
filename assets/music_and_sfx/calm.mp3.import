@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/calm.mp3-0535113f8bbe4d8e858e590c2ad1f89d.mp3str"
+
+[deps]
+
+source_file="res://assets/music_and_sfx/calm.mp3"
+dest_files=[ "res://.import/calm.mp3-0535113f8bbe4d8e858e590c2ad1f89d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

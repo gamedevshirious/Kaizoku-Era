@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/World/Port/Port.tscn" type="PackedScene" id=2]
+
+[sub_resource type="SpatialMaterial" id=6]
+albedo_color = Color( 0, 0.360784, 0.0509804, 1 )
+
+[sub_resource type="CylinderMesh" id=4]
+material = SubResource( 6 )
+top_radius = 100.0
+bottom_radius = 200.0
+height = 40.0
+
+[sub_resource type="CylinderShape" id=5]
+radius = 150.0
+height = 50.0
+
+[node name="Island" type="StaticBody"]
+
+[node name="mesh" type="MeshInstance" parent="."]
+mesh = SubResource( 4 )
+skeleton = NodePath("../..")
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 5 )
+
+[node name="Port" parent="." instance=ExtResource( 2 )]
+
+[connection signal="body_entered" from="Port" to="Port" method="_on_Port_body_entered"]

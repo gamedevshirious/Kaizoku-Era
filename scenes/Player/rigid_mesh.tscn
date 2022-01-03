@@ -1,0 +1,259 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://assets/art/pirate/torso/basic.png" type="Texture" id=1]
+[ext_resource path="res://assets/art/pirate/thigh/basic.png" type="Texture" id=2]
+[ext_resource path="res://assets/art/pirate/upper/lower/basic.png" type="Texture" id=3]
+[ext_resource path="res://assets/art/pirate/upper/basic.png" type="Texture" id=4]
+[ext_resource path="res://assets/art/pirate/thigh/leg/basic.png" type="Texture" id=5]
+[ext_resource path="res://assets/art/pirate/head/face/basic.png" type="Texture" id=6]
+
+[sub_resource type="CapsuleShape2D" id=9]
+height = 35.5042
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 34, 45.5 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 19, 51 )
+
+[sub_resource type="CapsuleShape2D" id=10]
+radius = 35.0
+
+[sub_resource type="CircleShape2D" id=7]
+radius = 30.0167
+
+[sub_resource type="CircleShape2D" id=11]
+radius = 24.0208
+
+[node name="mesh" type="Node2D"]
+position = Vector2( 0, -17.838 )
+
+[node name="l_upper" type="RigidBody2D" parent="."]
+position = Vector2( 57, -16.162 )
+rotation = 2.56494
+collision_layer = 7
+collision_mask = 7
+mode = 3
+
+[node name="l_upper" type="Sprite" parent="l_upper"]
+position = Vector2( 1.91338, 40.4621 )
+texture = ExtResource( 4 )
+offset = Vector2( 0, -25 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="l_upper"]
+position = Vector2( 2.38557, 14.6734 )
+shape = SubResource( 9 )
+
+[node name="lower" type="RigidBody2D" parent="l_upper"]
+position = Vector2( 2.27575, -43.85 )
+collision_layer = 7
+collision_mask = 7
+
+[node name="lower" type="Sprite" parent="l_upper/lower"]
+position = Vector2( -0.36237, 34.3121 )
+texture = ExtResource( 3 )
+offset = Vector2( 0, -25 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="l_upper/lower"]
+position = Vector2( -0.252136, 2.22181 )
+shape = SubResource( 9 )
+
+[node name="l_thigh" type="RigidBody2D" parent="."]
+position = Vector2( 22, 81.838 )
+collision_layer = 7
+collision_mask = 7
+mode = 3
+
+[node name="l_thigh" type="Sprite" parent="l_thigh"]
+position = Vector2( -1.4207, -47.2294 )
+texture = ExtResource( 2 )
+offset = Vector2( 0, 25 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="l_thigh"]
+position = Vector2( -0.61824, -24.1121 )
+shape = SubResource( 9 )
+
+[node name="leg" type="RigidBody2D" parent="l_thigh"]
+position = Vector2( 0, 62 )
+collision_layer = 7
+collision_mask = 7
+
+[node name="leg" type="Sprite" parent="l_thigh/leg"]
+position = Vector2( -0.36746, -59.5583 )
+texture = ExtResource( 5 )
+offset = Vector2( 0, 25 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="l_thigh/leg"]
+position = Vector2( -0.61824, -24.1121 )
+shape = SubResource( 9 )
+
+[node name="torso" type="RigidBody2D" parent="."]
+position = Vector2( 0, -6.157 )
+collision_layer = 7
+collision_mask = 7
+mode = 3
+
+[node name="torso" type="Sprite" parent="torso"]
+position = Vector2( 0, 3.8147e-06 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="torso_hitbox" type="Area2D" parent="torso"]
+position = Vector2( 0, 3.8147e-06 )
+collision_layer = 6
+collision_mask = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="torso/torso_hitbox"]
+position = Vector2( -1.00016, -3.50503 )
+shape = SubResource( 8 )
+
+[node name="legs" type="Area2D" parent="torso"]
+position = Vector2( 3, 94.995 )
+collision_mask = 3
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="torso/legs"]
+position = Vector2( 0, 1 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="torso"]
+position = Vector2( -2, -5.005 )
+shape = SubResource( 10 )
+
+[node name="head" type="RigidBody2D" parent="."]
+position = Vector2( 0.99992, -58.162 )
+rotation = 3.96858e-09
+collision_layer = 7
+collision_mask = 7
+mode = 3
+
+[node name="head" type="Sprite" parent="head"]
+texture = ExtResource( 6 )
+offset = Vector2( 0, -25 )
+
+[node name="hat" type="Sprite" parent="head/head"]
+position = Vector2( -3, -32 )
+rotation = -4.2955e-06
+
+[node name="head_hitbox" type="Area2D" parent="head/head"]
+collision_layer = 6
+collision_mask = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="head/head/head_hitbox"]
+position = Vector2( -1.00077, -28 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="head"]
+position = Vector2( 7.98702e-05, -26 )
+shape = SubResource( 11 )
+
+[node name="r_upper" type="RigidBody2D" parent="."]
+position = Vector2( -70, -18.162 )
+rotation = 4.0211
+collision_layer = 7
+collision_mask = 7
+mode = 3
+
+[node name="r_upper" type="Sprite" parent="r_upper"]
+position = Vector2( 1.91338, 40.4621 )
+texture = ExtResource( 4 )
+offset = Vector2( 0, -25 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="r_upper"]
+position = Vector2( 2.38557, 14.6734 )
+shape = SubResource( 9 )
+
+[node name="lower" type="RigidBody2D" parent="r_upper"]
+position = Vector2( 2.27575, -43.85 )
+collision_layer = 7
+collision_mask = 7
+
+[node name="lower" type="Sprite" parent="r_upper/lower"]
+position = Vector2( -0.36237, 34.3121 )
+texture = ExtResource( 3 )
+offset = Vector2( 0, -25 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="r_upper/lower"]
+position = Vector2( -0.252136, 2.22181 )
+shape = SubResource( 9 )
+
+[node name="r_thigh" type="RigidBody2D" parent="."]
+position = Vector2( -25, 81.838 )
+collision_layer = 7
+collision_mask = 7
+mode = 3
+
+[node name="r_thigh" type="Sprite" parent="r_thigh"]
+position = Vector2( -1.4207, -47.2294 )
+texture = ExtResource( 2 )
+offset = Vector2( 0, 25 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="r_thigh"]
+position = Vector2( -0.61824, -24.1121 )
+shape = SubResource( 9 )
+
+[node name="leg" type="RigidBody2D" parent="r_thigh"]
+position = Vector2( 0, 62 )
+collision_layer = 7
+collision_mask = 7
+
+[node name="leg" type="Sprite" parent="r_thigh/leg"]
+position = Vector2( -0.36746, -59.5583 )
+texture = ExtResource( 5 )
+offset = Vector2( 0, 25 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="r_thigh/leg"]
+position = Vector2( -0.61824, -24.1121 )
+shape = SubResource( 9 )
+
+[node name="Joints" type="Node2D" parent="."]
+position = Vector2( 0, 17.838 )
+
+[node name="l_arm_joint" type="PinJoint2D" parent="Joints"]
+position = Vector2( 55, -26 )
+node_a = NodePath("../../l_upper/lower")
+node_b = NodePath("../../l_upper")
+
+[node name="l_leg_joint" type="PinJoint2D" parent="Joints"]
+position = Vector2( 21, 70 )
+node_a = NodePath("../../l_thigh")
+node_b = NodePath("../../l_thigh/leg")
+
+[node name="r_leg_joint" type="PinJoint2D" parent="Joints"]
+position = Vector2( -26, 69 )
+node_a = NodePath("../../r_thigh")
+node_b = NodePath("../../r_thigh/leg")
+
+[node name="r_arm_joint" type="PinJoint2D" parent="Joints"]
+position = Vector2( -80, -31 )
+node_a = NodePath("../../r_upper")
+node_b = NodePath("../../r_upper/lower")
+
+[node name="r_leg_torso_joint" type="PinJoint2D" parent="Joints"]
+position = Vector2( -26, 11 )
+node_a = NodePath("../../torso")
+node_b = NodePath("../../r_thigh")
+
+[node name="l_leg_torso_joint" type="PinJoint2D" parent="Joints"]
+position = Vector2( 19, 11 )
+node_a = NodePath("../../torso")
+node_b = NodePath("../../l_thigh")
+
+[node name="r_arm_torso_joint" type="PinJoint2D" parent="Joints"]
+position = Vector2( -33, -64 )
+node_a = NodePath("../../torso")
+node_b = NodePath("../../r_upper")
+
+[node name="l_arm_torso_joint" type="PinJoint2D" parent="Joints"]
+position = Vector2( 24, -66 )
+node_a = NodePath("../../torso")
+node_b = NodePath("../../l_upper")
+
+[node name="torso_head_joint" type="PinJoint2D" parent="Joints"]
+position = Vector2( -1, -76 )
+node_a = NodePath("../../torso")
+node_b = NodePath("../../head")

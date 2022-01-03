@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/drama.mp3-5a888af658fb531127d1e64b6cb5a7b7.mp3str"
+
+[deps]
+
+source_file="res://assets/music_and_sfx/drama.mp3"
+dest_files=[ "res://.import/drama.mp3-5a888af658fb531127d1e64b6cb5a7b7.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

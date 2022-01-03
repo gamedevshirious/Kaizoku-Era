@@ -1,0 +1,245 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://scenes/World/Training/Training.gd" type="Script" id=1]
+[ext_resource path="res://assets/art/shapes/square.png" type="Texture" id=2]
+[ext_resource path="res://scenes/Player/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Dummies/Dummy/Dummy.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/Weapons/Cutlass.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/Weapons/Bomb/Bomb.tscn" type="PackedScene" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 290, 31.1181 )
+
+[sub_resource type="QuadMesh" id=2]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 3446.5, 71.5 )
+
+[node name="Training" type="Node2D"]
+position = Vector2( 416, -237 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_vertical_guides_": [ 4197.0 ]
+}
+
+[node name="Floor" type="Node2D" parent="."]
+
+[node name="Floor1" type="StaticBody2D" parent="Floor"]
+position = Vector2( 715, 377 )
+collision_layer = 3
+collision_mask = 3
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="square" type="Sprite" parent="Floor/Floor1"]
+scale = Vector2( 9.07137, 1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor/Floor1"]
+shape = SubResource( 1 )
+
+[node name="Floor3" type="StaticBody2D" parent="Floor"]
+position = Vector2( 132, 381 )
+collision_layer = 3
+collision_mask = 3
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="square" type="Sprite" parent="Floor/Floor3"]
+scale = Vector2( 9.07137, 1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor/Floor3"]
+shape = SubResource( 1 )
+
+[node name="Floor5" type="StaticBody2D" parent="Floor"]
+position = Vector2( -442, 377 )
+collision_layer = 3
+collision_mask = 3
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="square" type="Sprite" parent="Floor/Floor5"]
+scale = Vector2( 9.07137, 1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor/Floor5"]
+shape = SubResource( 1 )
+
+[node name="Floor4" type="StaticBody2D" parent="Floor"]
+position = Vector2( 1295, 376 )
+collision_layer = 3
+collision_mask = 3
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="square" type="Sprite" parent="Floor/Floor4"]
+scale = Vector2( 9.07137, 1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor/Floor4"]
+shape = SubResource( 1 )
+
+[node name="Floor2" type="StaticBody2D" parent="Floor"]
+position = Vector2( 554, 60 )
+collision_layer = 3
+collision_mask = 3
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="square" type="Sprite" parent="Floor/Floor2"]
+scale = Vector2( 9.07137, 1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor/Floor2"]
+shape = SubResource( 1 )
+
+[node name="Floor6" type="StaticBody2D" parent="Floor"]
+position = Vector2( -61, -160 )
+collision_layer = 3
+collision_mask = 3
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="square" type="Sprite" parent="Floor/Floor6"]
+scale = Vector2( 9.07137, 1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor/Floor6"]
+shape = SubResource( 1 )
+
+[node name="Floor7" type="StaticBody2D" parent="Floor"]
+position = Vector2( -575, -411 )
+collision_layer = 3
+collision_mask = 3
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="square" type="Sprite" parent="Floor/Floor7"]
+scale = Vector2( 9.07137, 1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor/Floor7"]
+shape = SubResource( 1 )
+
+[node name="Floor8" type="StaticBody2D" parent="Floor"]
+position = Vector2( 1255, -255 )
+collision_layer = 3
+collision_mask = 3
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="square" type="Sprite" parent="Floor/Floor8"]
+scale = Vector2( 9.07137, 1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor/Floor8"]
+shape = SubResource( 1 )
+
+[node name="Bounds" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Bounds"]
+position = Vector2( 16, 912 )
+collision_layer = 8388615
+collision_mask = 8388615
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Bounds/StaticBody2D"]
+position = Vector2( 384, -78.75 )
+scale = Vector2( 6882, 158.5 )
+mesh = SubResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bounds/StaticBody2D"]
+position = Vector2( 391.5, -81 )
+shape = SubResource( 3 )
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Bounds"]
+position = Vector2( 6910, 912 )
+collision_layer = 8388615
+collision_mask = 7
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Bounds/StaticBody2D4"]
+position = Vector2( 384, -78.75 )
+scale = Vector2( 6882, 158.5 )
+mesh = SubResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bounds/StaticBody2D4"]
+position = Vector2( 391.5, -81 )
+shape = SubResource( 3 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Bounds"]
+position = Vector2( -3044, -3081 )
+rotation = 1.5708
+collision_layer = 8388615
+collision_mask = 7
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Bounds/StaticBody2D2"]
+position = Vector2( 384, -78.75 )
+scale = Vector2( 6882, 158.5 )
+mesh = SubResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bounds/StaticBody2D2"]
+position = Vector2( 391.5, -81 )
+shape = SubResource( 3 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Bounds"]
+position = Vector2( 10603, -3005 )
+rotation = 1.5708
+collision_layer = 8388615
+collision_mask = 7
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Bounds/StaticBody2D3"]
+position = Vector2( 384, -78.75 )
+scale = Vector2( 6882, 158.5 )
+mesh = SubResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bounds/StaticBody2D3"]
+position = Vector2( 391.5, -81 )
+shape = SubResource( 3 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 4482, 632 )
+
+[node name="Dummy" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3758, 603 )
+
+[node name="Dummy3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 5623, 593 )
+type = "bowman"
+
+[node name="Dummy2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2743, 96 )
+soldier_class = "empire-officer"
+
+[node name="Objects" type="Node2D" parent="."]
+
+[node name="Cutlass" parent="Objects" instance=ExtResource( 5 )]
+position = Vector2( 4586, 733 )
+mass = 0.01
+
+[node name="Bomb" parent="Objects" instance=ExtResource( 6 )]
+position = Vector2( 1288, -718 )
+type = "poison"
+
+[node name="Bomb2" parent="Objects" instance=ExtResource( 6 )]
+position = Vector2( 1260, 127 )
+type = "bomb"

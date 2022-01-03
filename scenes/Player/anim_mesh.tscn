@@ -1,0 +1,1347 @@
+[gd_scene load_steps=55 format=2]
+
+[ext_resource path="res://assets/art/pirate/torso/basic.png" type="Texture" id=1]
+[ext_resource path="res://assets/art/pirate/thigh/basic.png" type="Texture" id=2]
+[ext_resource path="res://assets/art/pirate/upper/lower/basic.png" type="Texture" id=3]
+[ext_resource path="res://assets/art/pirate/upper/basic.png" type="Texture" id=4]
+[ext_resource path="res://assets/art/pirate/head/face/basic.png" type="Texture" id=5]
+[ext_resource path="res://assets/art/pirate/thigh/leg/basic.png" type="Texture" id=7]
+
+[sub_resource type="CircleShape2D" id=52]
+
+[sub_resource type="CircleShape2D" id=53]
+radius = 30.0167
+
+[sub_resource type="RectangleShape2D" id=54]
+extents = Vector2( 34, 45.5 )
+
+[sub_resource type="Animation" id=59]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("mesh/head:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=20]
+resource_name = "cutlass_attack_1"
+length = 0.6
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("mesh/l_upper/lower:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.25, 0.35, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -36.3256, -65.5414, -90.2188, -40.7233, -31.036 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("mesh/l_upper:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 180.878, 180.878, 131.809 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("mesh/l_upper/lower/weapon:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.25, 0.35, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -174.219, -205.028, -99.9707, -82.4384 ]
+}
+
+[sub_resource type="Animation" id=26]
+resource_name = "cutlass_attack_2"
+length = 0.6
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("mesh/r_upper:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.25, 0.35, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -178.061, -167.676, -128.276, -128.276, -178.061 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("mesh/l_upper/lower:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -36.3256, -65.5414, -139.691, -213.841, -90.2188, -65.471, -40.7233, -31.036 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("mesh/l_upper:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 180.878, 180.878, 131.809 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("mesh/l_upper/lower/weapon:z_index")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0, 1, 0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("mesh/l_upper/lower/weapon:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -190.752, -206.083, -181.994, -86.6422, -210.335, -89.6484, -89.6484 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("mesh/l_upper/lower:z_index")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.2, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 0 ]
+}
+
+[sub_resource type="Animation" id=37]
+resource_name = "cutlass_hack"
+length = 0.6
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("mesh/l_upper/lower:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.25, 0.35, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -36.3256, -95.7926, -90.2188, -17.0039, -5.52535 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("mesh/l_upper:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3, 0.35, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 180.878, 83.4495, 131.809, 154.479, 179.001 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("mesh/l_upper/lower/weapon:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.25, 0.35, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -174.219, -186.543, -205.028, -99.9707, -55.014 ]
+}
+
+[sub_resource type="Animation" id=29]
+resource_name = "cutlass_thrust_1"
+length = 0.6
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("mesh/l_upper/lower:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.25, 0.3, 0.35, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -36.3256, -65.5414, -120.247, -72.0562, -40.7233, -35.47 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("mesh/l_upper:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.25, 0.3, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 180.878, 180.878, 144.076, 162.088, 128.097 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("mesh/l_upper/lower/weapon:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.25, 0.3, 0.35, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -174.219, -9.93114, -81.2522, -99.9707, -82.4384 ]
+}
+
+[sub_resource type="Animation" id=31]
+resource_name = "cutlass_thrust_2"
+length = 0.6
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("mesh/l_upper/lower:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.25, 0.35, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -36.3256, -65.5414, -120.247, -40.7233, -1.54848 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("mesh/l_upper:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 180.878, 180.878, 131.809, 75.3883 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("mesh/l_upper/lower/weapon:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.25, 0.35, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -174.219, -22.4213, -99.9707, -96.9445 ]
+}
+
+[sub_resource type="Animation" id=34]
+resource_name = "cutlass_uppercut"
+length = 0.6
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("mesh/l_upper/lower:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.25, 0.35, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -36.3256, -50.9335, -65.5414, -4.13909, -40.7233, -28.5571 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("mesh/l_upper:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.25, 0.3, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 180.878, 180.878, 124.246, 131.809, 50.2814 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("mesh/l_upper/lower/weapon:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.55 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 1, 1 ), Vector2( 1, -1 ), Vector2( 1, -1 ), Vector2( 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("mesh/l_upper/lower/weapon:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.25, 0.35, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -174.219, -143.859, -8.14676, -22.4213, -99.9707, -61.4136 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("mesh/l_upper/lower:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.05, 0.1, 0.25 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=14]
+resource_name = "fall"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("mesh/r_thigh/leg:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1.05323, 49.6711 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("mesh/r_thigh/leg:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -0.122546 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("mesh/r_thigh:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -22.2322, 39.96 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("mesh/r_thigh:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -14.4742 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("mesh/r_upper/lower:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1.15551, -51.3213 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("mesh/r_upper/lower:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -49.792 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("mesh/r_upper:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -27.2782, -50.9372 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("mesh/r_upper:rotation_degrees")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -64.7871 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("mesh/l_thigh/leg:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1.05324, 49.6711 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("mesh/l_thigh/leg:rotation_degrees")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 52.4625 ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("mesh/l_thigh:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 20.5793, 34.6086 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("mesh/l_thigh:rotation_degrees")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -63.0945 ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("mesh/l_upper/lower:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -50 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("mesh/l_upper/lower:rotation_degrees")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 47.1006 ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("mesh/l_upper:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 25.3354, -52.038 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("mesh/l_upper:rotation_degrees")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 48.2743 ]
+}
+
+[sub_resource type="Animation" id=42]
+resource_name = "heavy_punch"
+length = 5.0
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("mesh/l_upper/lower:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.25, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -114.709, -85.8263, -33.4268, -5.81288 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("mesh/l_upper:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.25, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 202.394, 144.062, 106.337, 90.8186 ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "idle"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("mesh/r_thigh/leg:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 11.1339 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("mesh/r_thigh:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -14.4742 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("mesh/r_upper/lower:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -33.8233, -38.1007 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("mesh/r_upper:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -178.061, -166.975 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("mesh/l_thigh/leg:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 11.1339 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("mesh/l_thigh:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -14.4742 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("mesh/l_upper/lower:rotation_degrees")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -36.3256, -25.9628 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("mesh/l_upper:rotation_degrees")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 180.878, 170.515 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("mesh/l_upper/lower/weapon:rotation_degrees")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -174.219 ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("mesh/head:rotation_degrees")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=51]
+resource_name = "kick"
+tracks/0/type = "value"
+tracks/0/path = NodePath("mesh/l_thigh/leg:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.9, 1.3, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 11.1339, 99.2003, 16.6967, 7.38394, 51.7559, 12.5599 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("mesh/l_thigh:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.9, 1.3, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -14.4742, -139.816, -123.736, -112.465, -130.696, -15.3034 ]
+}
+
+[sub_resource type="Animation" id=58]
+resource_name = "pose"
+length = 3.0
+
+[sub_resource type="Animation" id=3]
+step = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath("mesh:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.75 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 360.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CollisionShape2D:shape:radius")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 30.35, 68.7301, 30.35 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("CollisionShape2D:shape:height")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 189.382, 0.0, 189.382 ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "somersault_backwards"
+step = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath("mesh:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.75 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, -360.0 ]
+}
+
+[sub_resource type="Animation" id=40]
+resource_name = "throw"
+length = 0.6
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("mesh/l_upper/lower:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.25, 0.35, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -36.3256, -123.335, -54.3379, -17.0039, -5.52535 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("mesh/l_upper:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.25, 0.35, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 180.878, 52.0988, 111.881, 96.2686, 179.001 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("mesh/l_upper/lower/weapon:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.25, 0.35, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -174.219, -186.543, -205.028, -99.9707, -55.014 ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "throw_weapon"
+} ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("mesh/l_upper/lower/fist/CollisionShape2D:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.25, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=56]
+resource_name = "throw_bomb"
+length = 0.6
+step = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("mesh/r_upper/lower:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.25, 0.35, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -36.3256, -123.335, -54.3379, -17.0039, -5.52535 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("mesh/r_upper:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.25, 0.35, 0.5, 0.504 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 180.878, 52.0988, 111.881, 96.2686, 179.001, -179.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("mesh/r_upper/lower/weapon:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.25, 0.35, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -174.219, -186.543, -205.028, -99.9707, -55.014 ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.101 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "throw_weapon"
+} ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("mesh/l_upper/lower/fist/CollisionShape2D:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.25, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=47]
+resource_name = "upper_cut_punch"
+length = 5.0
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("mesh/l_upper/lower:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.25, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -114.709, -85.8263, -33.4268, -71.0821 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("mesh/l_upper:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.25, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 202.394, 144.062, 61.8849, 4.30715 ]
+}
+
+[sub_resource type="Animation" id=18]
+resource_name = "walk"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("mesh/r_thigh/leg:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1.05323, 49.6711 ), Vector2( 1.05323, 49.6711 ), Vector2( 1.05323, 49.6711 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("mesh/r_thigh/leg:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 29.3067, 22.0428, 39.5557 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("mesh/r_thigh:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -22.2322, 39.96 ), Vector2( -22.2322, 39.96 ), Vector2( -22.2322, 39.96 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("mesh/r_thigh:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ -49.6203, -20.8647, 0.109272 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("mesh/l_thigh/leg:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1.05324, 49.6711 ), Vector2( 1.05324, 49.6711 ), Vector2( 1.05324, 49.6711 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("mesh/l_thigh/leg:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 18.3326, 69.6594, 21.6266 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("mesh/l_thigh:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 20.5793, 34.6086 ), Vector2( 20.5793, 34.6086 ), Vector2( 20.5793, 34.6086 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("mesh/l_thigh:rotation_degrees")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 26.3603, -8.87259, -34.4618 ]
+}
+
+[sub_resource type="AnimationNodeAnimation" id=12]
+animation = "somersault_backwards"
+
+[sub_resource type="AnimationNodeAnimation" id=16]
+animation = "fall"
+
+[sub_resource type="AnimationNodeAnimation" id=17]
+animation = "walk"
+
+[sub_resource type="AnimationNodeAnimation" id=60]
+animation = "pose"
+
+[sub_resource type="AnimationNodeAnimation" id=9]
+animation = "somersault"
+
+[sub_resource type="AnimationNodeOneShot" id=21]
+
+[sub_resource type="AnimationNodeAnimation" id=22]
+animation = "cutlass_attack_1"
+
+[sub_resource type="AnimationNodeAnimation" id=25]
+animation = "fall"
+
+[sub_resource type="AnimationNodeAnimation" id=45]
+animation = "heavy_punch"
+
+[sub_resource type="AnimationNodeAnimation" id=46]
+animation = "heavy_punch"
+
+[sub_resource type="AnimationNodeAnimation" id=48]
+animation = "upper_cut_punch"
+
+[sub_resource type="AnimationNodeAnimation" id=50]
+animation = "kick"
+
+[sub_resource type="AnimationNodeAnimation" id=57]
+animation = "throw_bomb"
+
+[sub_resource type="AnimationNodeAnimation" id=30]
+animation = "cutlass_thrust_1"
+
+[sub_resource type="AnimationNodeAnimation" id=32]
+animation = "cutlass_attack_2"
+
+[sub_resource type="AnimationNodeAnimation" id=33]
+animation = "cutlass_thrust_2"
+
+[sub_resource type="AnimationNodeAnimation" id=35]
+animation = "cutlass_uppercut"
+
+[sub_resource type="AnimationNodeAnimation" id=38]
+animation = "cutlass_hack"
+
+[sub_resource type="AnimationNodeAnimation" id=41]
+animation = "throw"
+
+[sub_resource type="AnimationNodeAnimation" id=43]
+animation = "heavy_punch"
+
+[sub_resource type="AnimationNodeAnimation" id=44]
+animation = "heavy_punch"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=23]
+blend_point_0/node = SubResource( 22 )
+blend_point_0/pos = Vector2( -0.1, 0.1 )
+blend_point_1/node = SubResource( 25 )
+blend_point_1/pos = Vector2( 0, 0 )
+blend_point_2/node = SubResource( 30 )
+blend_point_2/pos = Vector2( -0.1, 0.4 )
+blend_point_3/node = SubResource( 32 )
+blend_point_3/pos = Vector2( -0.1, 0.2 )
+blend_point_4/node = SubResource( 33 )
+blend_point_4/pos = Vector2( -0.1, 0.3 )
+blend_point_5/node = SubResource( 35 )
+blend_point_5/pos = Vector2( -0.1, 0.5 )
+blend_point_6/node = SubResource( 38 )
+blend_point_6/pos = Vector2( -0.1, 0.6 )
+blend_point_7/node = SubResource( 41 )
+blend_point_7/pos = Vector2( 0, 0.7 )
+blend_point_8/node = SubResource( 43 )
+blend_point_8/pos = Vector2( 0, 0.3 )
+blend_point_9/node = SubResource( 44 )
+blend_point_9/pos = Vector2( 0, 0.4 )
+blend_point_10/node = SubResource( 45 )
+blend_point_10/pos = Vector2( 0, 0.2 )
+blend_point_11/node = SubResource( 46 )
+blend_point_11/pos = Vector2( 0, 0.1 )
+blend_point_12/node = SubResource( 48 )
+blend_point_12/pos = Vector2( 0, 0.5 )
+blend_point_13/node = SubResource( 50 )
+blend_point_13/pos = Vector2( 0, 0.6 )
+blend_point_14/node = SubResource( 57 )
+blend_point_14/pos = Vector2( 0, 0.8 )
+
+[sub_resource type="AnimationNodeBlend3" id=15]
+
+[sub_resource type="AnimationNodeAnimation" id=8]
+animation = "idle"
+
+[sub_resource type="AnimationNodeOneShot" id=10]
+
+[sub_resource type="AnimationNodeBlend3" id=61]
+
+[sub_resource type="AnimationNodeBlendTree" id=7]
+graph_offset = Vector2( 4, 9.75 )
+nodes/Animation/node = SubResource( 9 )
+nodes/Animation/position = Vector2( 60, 260 )
+"nodes/Animation 2/node" = SubResource( 12 )
+"nodes/Animation 2/position" = Vector2( 0, 360 )
+"nodes/Animation 3/node" = SubResource( 16 )
+"nodes/Animation 3/position" = Vector2( 520, 480 )
+"nodes/Animation 4/node" = SubResource( 17 )
+"nodes/Animation 4/position" = Vector2( 800, 460 )
+"nodes/Animation 5/node" = SubResource( 60 )
+"nodes/Animation 5/position" = Vector2( 80, 160 )
+nodes/attack/node = SubResource( 21 )
+nodes/attack/position = Vector2( 360, -40 )
+nodes/attack_anim/node = SubResource( 23 )
+nodes/attack_anim/position = Vector2( 60, -20 )
+nodes/body_blend/node = SubResource( 15 )
+nodes/body_blend/position = Vector2( 820, 160 )
+nodes/idle/node = SubResource( 8 )
+nodes/idle/position = Vector2( 80, -180 )
+nodes/output/position = Vector2( 1000, 180 )
+nodes/somersault/node = SubResource( 10 )
+nodes/somersault/position = Vector2( 600, 40 )
+nodes/somersault_blend/node = SubResource( 61 )
+nodes/somersault_blend/position = Vector2( 320, 220 )
+node_connections = [ "output", 0, "body_blend", "somersault_blend", 0, "Animation 5", "somersault_blend", 1, "Animation", "somersault_blend", 2, "Animation 2", "attack", 0, "idle", "attack", 1, "attack_anim", "somersault", 0, "attack", "somersault", 1, "somersault_blend", "body_blend", 0, "Animation 3", "body_blend", 1, "somersault", "body_blend", 2, "Animation 4" ]
+
+[node name="mesh" type="Node2D"]
+position = Vector2( 0, -17.838 )
+
+[node name="l_upper" type="Sprite" parent="."]
+position = Vector2( 25.3354, -52.038 )
+rotation = 2.97605
+texture = ExtResource( 4 )
+offset = Vector2( 0, -25 )
+__meta__ = {
+"_edit_bone_": true,
+"_edit_ik_": true
+}
+
+[node name="lower" type="Sprite" parent="l_upper"]
+position = Vector2( 0, -50 )
+rotation = -0.453136
+texture = ExtResource( 3 )
+offset = Vector2( 0, -25 )
+__meta__ = {
+"_edit_bone_": true,
+"_edit_ik_": true
+}
+
+[node name="weapon" type="Sprite" parent="l_upper/lower"]
+position = Vector2( 0.980408, -39.3449 )
+rotation = -3.04069
+offset = Vector2( 40, -5 )
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="fist" type="RigidBody2D" parent="l_upper/lower"]
+position = Vector2( 0.0788383, -52.5819 )
+collision_layer = 2
+collision_mask = 2
+mode = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="l_upper/lower/fist"]
+shape = SubResource( 52 )
+disabled = true
+
+[node name="l_thigh" type="Sprite" parent="."]
+position = Vector2( 20.5793, 34.6086 )
+rotation = -0.252622
+texture = ExtResource( 2 )
+offset = Vector2( 0, 25 )
+__meta__ = {
+"_edit_bone_": true,
+"_edit_ik_": true
+}
+
+[node name="leg" type="Sprite" parent="l_thigh"]
+position = Vector2( 1.05324, 49.6711 )
+rotation = 0.194323
+texture = ExtResource( 7 )
+offset = Vector2( 0, 25 )
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="leg" type="RigidBody2D" parent="l_thigh/leg"]
+position = Vector2( 0.220211, 47.4913 )
+rotation = -0.0691979
+collision_layer = 2
+collision_mask = 2
+mode = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="l_thigh/leg/leg"]
+shape = SubResource( 52 )
+
+[node name="head" type="Sprite" parent="."]
+position = Vector2( 0.99992, -58.162 )
+texture = ExtResource( 5 )
+offset = Vector2( 0, -25 )
+
+[node name="hat" type="Sprite" parent="head"]
+position = Vector2( -3, -32 )
+rotation = -4.2955e-06
+
+[node name="head_hitbox" type="Area2D" parent="head"]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="head/head_hitbox"]
+position = Vector2( -1.00077, -28 )
+shape = SubResource( 53 )
+
+[node name="torso" type="Sprite" parent="."]
+position = Vector2( 0, -6.157 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_bone_": true,
+"_edit_ik_": true,
+"_edit_lock_": true
+}
+
+[node name="torso_hitbox" type="Area2D" parent="torso"]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="torso/torso_hitbox"]
+position = Vector2( -1.00016, -3.50503 )
+shape = SubResource( 54 )
+
+[node name="r_thigh" type="Sprite" parent="."]
+position = Vector2( -22.2322, 39.96 )
+rotation = -0.252622
+texture = ExtResource( 2 )
+offset = Vector2( 0, 25 )
+__meta__ = {
+"_edit_bone_": true,
+"_edit_ik_": true
+}
+
+[node name="leg" type="Sprite" parent="r_thigh"]
+position = Vector2( 1.05323, 49.6711 )
+rotation = 0.194323
+texture = ExtResource( 7 )
+offset = Vector2( 0, 25 )
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="r_upper" type="Sprite" parent="."]
+position = Vector2( -27.2782, -50.9372 )
+rotation = -2.91426
+texture = ExtResource( 4 )
+offset = Vector2( 0, -25 )
+__meta__ = {
+"_edit_bone_": true,
+"_edit_ik_": true
+}
+
+[node name="lower" type="Sprite" parent="r_upper"]
+position = Vector2( 1.15551, -51.3213 )
+rotation = -0.664983
+texture = ExtResource( 3 )
+offset = Vector2( 0, -25 )
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="weapon" type="Sprite" parent="r_upper/lower"]
+position = Vector2( 0.98, -39.345 )
+rotation = -3.04069
+offset = Vector2( 40, -5 )
+__meta__ = {
+"_edit_bone_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../..")
+anims/RESET = SubResource( 59 )
+anims/cutlass_attack_1 = SubResource( 20 )
+anims/cutlass_attack_2 = SubResource( 26 )
+anims/cutlass_hack = SubResource( 37 )
+anims/cutlass_thrust_1 = SubResource( 29 )
+anims/cutlass_thrust_2 = SubResource( 31 )
+anims/cutlass_uppercut = SubResource( 34 )
+anims/fall = SubResource( 14 )
+anims/heavy_punch = SubResource( 42 )
+anims/idle = SubResource( 6 )
+anims/kick = SubResource( 51 )
+anims/pose = SubResource( 58 )
+anims/somersault = SubResource( 3 )
+anims/somersault_backwards = SubResource( 11 )
+anims/throw = SubResource( 40 )
+anims/throw_bomb = SubResource( 56 )
+anims/upper_cut_punch = SubResource( 47 )
+anims/walk = SubResource( 18 )
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource( 7 )
+anim_player = NodePath("../AnimationPlayer")
+parameters/attack/active = false
+parameters/attack_anim/blend_position = Vector2( 0.00340712, 0.0976744 )
+parameters/body_blend/blend_amount = 0
+parameters/somersault/active = false
+parameters/somersault_blend/blend_amount = 0
